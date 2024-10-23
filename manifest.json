@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Cian Deal Analyzer N3",
+  "version": "1.0",
+  "description": "Analyzes property listings on Cian.ru to determine if they are good deals based on the user's income.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": [
+    "https://*.cian.ru/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.cian.ru/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

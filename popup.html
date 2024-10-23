@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cian Deal Analyzer N3</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div class="p-8">
+      <h1 class="text-2xl font-bold mb-4">Cian Deal Analyzer N3</h1>
+      <div class="mb-4">
+        <label for="income" class="block text-sm font-medium text-gray-700">Ваш доход (₽)</label>
+        <input type="number" id="income" name="income" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Введите ваш доход">
+      </div>
+      <button id="analyzeBtn" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Анализировать сделку
+      </button>
+      <div id="result" class="mt-4 hidden">
+        <h2 class="text-lg font-semibold mb-2">Результат анализа:</h2>
+        <p id="dealStatus" class="text-lg font-bold mb-2"></p>
+        <p id="monthlyPayment" class="mb-1"></p>
+        <p id="requiredIncome" class="mb-1"></p>
+        <p id="percentageDifference" class="mb-1"></p>
+      </div>
+      <div id="error" class="mt-4 hidden text-red-500"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
